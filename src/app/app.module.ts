@@ -27,7 +27,13 @@ import {UsersComponent} from './dashboard-entry/users/users.component';
 import {DashboardComponent} from './dashboard-entry/dashboard/dashboard.component';
 import { CreateEmployeComponent } from './dashboard-entry/gestionEmployes/create-employe/create-employe.component';
 import { CreateClientComponent } from './dashboard-entry/clients/create-client/create-client.component';
+import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from "@angular/material/select";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { EmployeDetailsComponent } from './gestionEmployes/create-employe/employe-details/employe-details.component';
 
 @NgModule({
   declarations: [
@@ -37,25 +43,34 @@ import { CreateClientComponent } from './dashboard-entry/clients/create-client/c
     LoginPageComponent, UsersComponent,
     DashboardComponent,
     CreateEmployeComponent,
-    CreateClientComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatListModule,
-    MatMenuModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    CreateClientComponent,
+    EmployeDetailsComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatListModule,
+        MatMenuModule,
+        MatIconModule,
+        MatBadgeModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatOptionModule,
+      MatDatepickerModule,
+      MatRadioModule,
+  MatSelectModule,
+ MatToolbarModule,
+      MatNativeDateModule,
+
+
+],
   providers: [],
   bootstrap: [AppComponent],
 })
