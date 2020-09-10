@@ -27,12 +27,19 @@ import {UsersComponent} from './dashboard-entry/users/users.component';
 import {DashboardComponent} from './dashboard-entry/dashboard/dashboard.component';
 import { CreateEmployeComponent } from './dashboard-entry/gestionEmployes/create-employe/create-employe.component';
 import { CreateClientComponent } from './dashboard-entry/clients/create-client/create-client.component';
+
 import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
+import { ListeDesEmployesComponent } from './dashboard-entry/liste-des-employes/liste-des-employes.component';
+import { AjouterUnEmployeComponent } from './dashboard-entry/Liste-Des-Employes/ajouter-un-employe/ajouter-un-employe.component';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import {ProgressSpinnerModule, TableModule} from 'primeng';
+
+
 import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from "@angular/material/select";
-import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { EmployeDetailsComponent } from './gestionEmployes/create-employe/employe-details/employe-details.component';
 
 @NgModule({
@@ -44,6 +51,9 @@ import { EmployeDetailsComponent } from './gestionEmployes/create-employe/employ
     DashboardComponent,
     CreateEmployeComponent,
     CreateClientComponent,
+
+    ListeDesEmployesComponent,
+    AjouterUnEmployeComponent,
     EmployeDetailsComponent],
     imports: [
         BrowserModule,
@@ -68,11 +78,44 @@ import { EmployeDetailsComponent } from './gestionEmployes/create-employe/employ
   MatSelectModule,
  MatToolbarModule,
       MatNativeDateModule,
-
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      BrowserAnimationsModule,
+      HttpClientModule,
+      MatSidenavModule,
+      MatDividerModule,
+      MatListModule,
+      MatMenuModule,
+      MatIconModule,
+      MatBadgeModule,
+      MatButtonModule,
+      MatTooltipModule,
+      MatCardModule,
+      MatFormFieldModule,
+      MatInputModule,
+      TableModule,
+      MatDialogModule,
+      ProgressSpinnerModule,
 
 ],
-  providers: [],
+
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue: {}
+
+
+    },
+    {
+      provide: MAT_DIALOG_DATA,
+      useValue: {}
+    },
+  ],
+
   bootstrap: [AppComponent],
+  entryComponents: [AjouterUnEmployeComponent],
+
 })
 export class AppModule {
 }
