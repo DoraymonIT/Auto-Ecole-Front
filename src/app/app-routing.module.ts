@@ -8,6 +8,7 @@ import {DashboardComponent} from './dashboard-entry/dashboard/dashboard.componen
 import {SettingsComponent} from './dashboard-entry/settings/settings.component';
 import {CreateEmployeComponent} from "./dashboard-entry/gestionEmployes/create-employe/create-employe.component";
 import {CreateClientComponent} from "./dashboard-entry/clients/create-client/create-client.component";
+import {ListeDesEmployesComponent} from "./dashboard-entry/liste-des-employes/liste-des-employes.component";
 
 
 const routes: Routes = [
@@ -31,7 +32,7 @@ const routes: Routes = [
       },
       {
         path: 'employes',
-        component: CreateEmployeComponent,
+        component: ListeDesEmployesComponent,
         outlet: 'un',
       }, {
         path: 'clients',

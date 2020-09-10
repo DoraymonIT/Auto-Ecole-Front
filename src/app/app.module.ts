@@ -27,6 +27,10 @@ import {UsersComponent} from './dashboard-entry/users/users.component';
 import {DashboardComponent} from './dashboard-entry/dashboard/dashboard.component';
 import { CreateEmployeComponent } from './dashboard-entry/gestionEmployes/create-employe/create-employe.component';
 import { CreateClientComponent } from './dashboard-entry/clients/create-client/create-client.component';
+import { ListeDesEmployesComponent } from './dashboard-entry/liste-des-employes/liste-des-employes.component';
+import { AjouterUnEmployeComponent } from './dashboard-entry/Liste-Des-Employes/ajouter-un-employe/ajouter-un-employe.component';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
+import {ProgressSpinnerModule, TableModule} from "primeng";
 
 
 @NgModule({
@@ -37,7 +41,9 @@ import { CreateClientComponent } from './dashboard-entry/clients/create-client/c
     LoginPageComponent, UsersComponent,
     DashboardComponent,
     CreateEmployeComponent,
-    CreateClientComponent],
+    CreateClientComponent,
+    ListeDesEmployesComponent,
+    AjouterUnEmployeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -54,10 +60,26 @@ import { CreateClientComponent } from './dashboard-entry/clients/create-client/c
     MatTooltipModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    TableModule,
+    MatDialogModule,
+    ProgressSpinnerModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue: {}
+
+
+    },
+    {
+      provide: MAT_DIALOG_DATA,
+      useValue: {}
+    },
+  ],
   bootstrap: [AppComponent],
+  entryComponents: [AjouterUnEmployeComponent],
+
 })
 export class AppModule {
 }
