@@ -1,0 +1,24 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import '~ngx-toastr/toastr';
+@import '~animate.css/animate.min.css';
+
+button:focus {
+  outline: 1px none;
+}
+
+html, body {
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-menu-panel {
+  max-width: 580px !important;
+}
+

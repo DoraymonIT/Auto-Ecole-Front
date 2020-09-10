@@ -1,0 +1,32 @@
+.mat-form-field {
+
+  width: 100%;
+}
+
+.images {
+  background-image: url("/assets/images/back1.jpg");
+  /* Full height */
+  height: 100%;
+  /*opacity: 0.5%;*/
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-image: radial-gradient( circle farthest-corner at 5.6% 54.5%,  rgba(47,71,79,1) 0%, rgba(159,188,198,1) 83.6% );*/
+  /* Mumkiin tbddl back1 w tddir back2 wlla back3 w chuuf lli 3jbattk  */
+  position: relative;
+}
+
+.mat-card {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+
+
+  .fs {
+    display: none;
+  }
+
+
+}

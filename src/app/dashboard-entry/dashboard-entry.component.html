@@ -1,0 +1,164 @@
+<mat-sidenav-container class="example-container" class="side-barr">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="opened"
+    style="padding: 15px; width: 240px;"
+  >
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <span style="text-align: center;" class="span">
+          <!-- <i class="fas fa-school"
+              style="font-size: 45px;text-align: center;"></i> -->
+          <img
+            src="../assets/images/angular-icon.svg"
+            alt="Login Image"
+            height="40px"
+          />
+          <br/>
+          AUTO-ECOLE 2.0</span
+        >
+      </mat-list-item>
+      <mat-list-item
+        [routerLink]="[{ outlets: { un: ['dash-board'] } }]" routerLinkActive="active"
+        class="list2"
+        role="listitem"
+        style="margin-top: 35px; margin-bottom: 4px;"
+      >
+        <h6><i class="fas fa-tachometer-alt"></i> <span class="then"></span> Dashboard</h6>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item
+        [routerLink]="[{ outlets: { un: ['clients'] } }]" routerLinkActive="active"
+        class="list2"
+        role="listitem"
+      >
+        <h6><i class="fas fa-users"></i> <span class="then"></span> Clients</h6>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item
+        [routerLink]="[{ outlets: { un: ['employes'] } }]" routerLinkActive="active"
+        class="list2"
+        role="listitem"
+      >
+        <h6><i class="fas fa-users"></i> <span class="then"></span> Employees</h6>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item
+        [routerLink]="[{ outlets: { un: ['users'] } }]" routerLinkActive="active"
+        class="list2"
+        role="listitem"
+      >
+        <h6><i class="fas fa-user-shield"></i> <span class="then"></span> Users</h6>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item
+        [routerLink]="[{ outlets: { un: ['settings'] } }]" routerLinkActive="active"
+        class="list2"
+        role="listitem"
+      >
+        <h6><i class="fas fa-cogs "></i> <span class="then"></span> Settings</h6>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <br><br><br><br>
+      <h6 style="text-align: center;color: white;font-size: 10px;bottom: 0">
+        © Coding with Love <i class="fas fa-heart    "></i> by BENDRIMOU | 2020 </h6>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <nav class="navbar navbar-dark boxShadow">
+      <button
+        mat-mini-fab
+        style="background-color: whitesmoke;"
+        (click)="sidenav.toggle()"
+      >
+        <i class="fas fa-bars" style="font-size: 25px;"></i>
+      </button>
+      <img
+        src="../assets/images/angular-icon.svg"
+        alt="Login Image"
+        height="40px"
+      />
+      <form class="form-inline my-lg-0">
+        <button mat-icon-button [matMenuTriggerFor]="menu" (click)="badge()">
+          <!-- #trigger="matMenuTrigger"
+          (mouseenter)="trigger.closeMenu()" -->
+          <i
+            class="fas fa-bell"
+            style="cursor: pointer; font-size: 18px;"
+            [matBadge]="ex"
+            matBadgePosition="above after"
+            matBadgeSize="small"
+            [matBadgeHidden]="hideMatBadge"
+            matBadgeColor="warn"
+          ></i>
+        </button>
+        <mat-menu class="my-class" #menu="matMenu" xPosition="before">
+          <div class="container-fluid" style="color: white;">
+            <div class="row">
+              <div class="col-md-2">
+                Ha Anya
+                <br>
+                <mat-divider></mat-divider>
+              </div>
+              <div class="col-md-8" style="text-align: center;">
+                Ha Anya
+                <br>
+                <mat-divider></mat-divider>
+                <p style="text-align: center;">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus commodi quibusdam perspiciatis alias nobis voluptas
+                  eaque? Laboriosam odio, sed illo quis eligendi consequuntur
+                  saepe nulla ullam soluta veniam suscipit blanditiis.
+                </p>
+                <button mat-raised-button style="text-align: center;">
+                  <i class="fas fa-check-double"></i> Marquer tous ca comme
+                  lu(e)s
+                </button>
+              </div>
+
+              <div class="col-md-2">
+                Ha Anya
+                <br>
+                <mat-divider></mat-divider>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <!-- <button class="icons" mat-raised-button matTooltip="This is your profile">
+            <i class="fas fa-user-circle"></i>
+            Profile</button> -->
+        <button
+          class="icons"
+          style="background-color: whitesmoke;"
+          mat-mini-fab
+          [matMenuTriggerFor]="menu2"
+        >
+          <i class="fas fa-cog" style="font-size: 16px;"></i>
+        </button>
+        <mat-menu #menu2="matMenu">
+          <button mat-menu-item [routerLink]="[{ outlets: { un: ['settings'] } }]"
+                  routerLinkActive="active">
+            <i class="fas fa-cog"></i> Settings
+          </button>
+
+          <button mat-menu-item [routerLink]="['']" routerLinkActive="active">
+            <i class="fas fa-user-circle"></i> My profil
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item [routerLink]="['']" routerLinkActive="active">
+            <i class="fas fa-sign-out-alt"></i> Log out
+          </button>
+          <!-- <button mat-menu-item>Autres</button> -->
+        </mat-menu>
+      </form>
+    </nav>
+    <section class="container-fluid " style="padding-top: 40px;">
+      <router-outlet name="un"></router-outlet>
+    </section>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

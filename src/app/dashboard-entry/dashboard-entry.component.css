@@ -1,0 +1,50 @@
+.side-barr {
+  /*height: 900px;*/
+}
+
+.icons {
+  margin: 10px;
+}
+
+#menu1 {
+  display: none;
+}
+
+.example-tree-progress-bar {
+  margin-left: 30px;
+}
+
+.mat-menu-content {
+  height: 100px;
+}
+
+.list2:hover {
+  cursor: pointer;
+  border-radius: 1px;
+  padding-left: 1px;
+  border-left: 7px solid black;
+}
+
+.list2:focus {
+  cursor: pointer;
+  border-radius: 1px;
+  padding-left: 1px;
+  border-left: 7px solid black;
+}
+
+.span {
+  margin: auto;
+}
+
+.boxShadow {
+  box-shadow: -10px 1px 25px -10px black;
+}
+
+mat-sidenav {
+  box-shadow: -15px 10px 35px -1px black;
+  position: fixed;
+}
+
+.then {
+  padding-left: 15px;
+}
